@@ -1,0 +1,66 @@
+ <body class="loading authentication-bg" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
+        <div class="account-pages pt-2 pt-sm-5 pb-4 pb-sm-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xxl-4 col-lg-5">
+                        <div class="card">
+
+                            <!-- Logo -->
+                           
+                            <div class="card-body p-4">
+                                
+                                <div class="text-center w-75 m-auto">
+                                    <h4 class="text-dark-50 text-center pb-0 fw-bold">Form Kepala Sekolah</h4>
+                                </div>
+                                
+                                <form action="<?php echo base_url()?>kepsek/ubahkepsek" method="POST">
+                                    
+                                     <input type="hidden" name="kepsekID" value="<?= $kepsek['kepsekID'] ?>">
+                                    <div class="mb-3">
+                                        <label for="fullname" class="form-label">Nama </label>
+                                        <input class="form-control" type="text" name="nama" id="name" value="<?= $kepsek['namakepsek'] ?>" placeholder="Masukkan Nama" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="emailaddress" class="form-label">NIP</label>
+                                        <input class="form-control" type="number" value="<?= $kepsek['nip'] ?>" name="nip" id="nip" required="" placeholder="Masukkan NIP" >
+                                    </div>
+
+                                   <div class="mb-3">
+                                        <label for="emailaddress" class="form-label">Tahun Ajaran</label>
+                                        <input class="form-control" type="number" name="tahunajaran" value="<?= $kepsek['tahunajaran'] ?>" id="tahunajaran" required="" placeholder="Masukkan Tahun Ajaran" max="2100" min="1900">
+                                    </div>
+
+                                     <div class="mb-3">
+                                        <label for="fullname" class="form-label">Nama Sekolah</label>
+                                        <input class="form-control" type="text" name="namasekolah" value="<?= $kepsek['namasekolah'] ?>" id="namasekolah" placeholder="Masukkan Nama Sekolah" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="fullname" class="form-label">Alamat Sekolah</label>
+                                        <input class="form-control" type="text" name="alamat" value="<?= $kepsek['alamatsekolah'] ?>" id="alamat" placeholder="Masukkan Alamat Sekolah" required>
+                                    </div>
+                                   
+                                    <div class="mb-3 mb-0 text-center">
+                                        <button class="btn btn-primary" type="submit"> Submit </button>
+                                      <a href="<?php echo base_url();?>datamaster/datakepsek" class="btn btn-link">Kembali</a>
+                               
+
+                                    </div>
+
+                                </form>
+                            </div> <!-- end card-body -->
+                        </div>
+                        <!-- end card -->
+
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end page -->
+
+        <ead>
+    </body>
+</html>
